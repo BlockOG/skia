@@ -37,7 +37,7 @@ jobs:
     - name: Download depot_tools
       run: |
         git clone 'https://chromium.googlesource.com/chromium/tools/depot_tools.git'
-        echo "::add-path::${PWD}/depot_tools"
+        echo "${PWD}/depot_tools"
     - name: Sync Deps
       run: python tools/git-sync-deps
     - name: Generating Ninja Files
